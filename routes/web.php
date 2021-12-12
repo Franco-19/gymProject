@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/create', function(){
-    return view('createRutine');
+Route::get('/getRutines', function(){
+    return view('getRutines');
 });
