@@ -1,0 +1,63 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body{
+	background:url(./imagen/fondo-sesion.jpg);
+	font-family: 'Montserrat', sans-serif;
+	opacity: 0.9;
+	justify-content: center;
+}
+/*Formulario*/
+.Form__Login{
+	display: flex;
+	padding: 0;
+	margin: 0;
+	flex-direction: column;
+}
+/* input contra y nombre */
+.Form__Login-div{
+	justify-content: center;
+	margin-left:5%;
+	margin-bottom:15%;
+	margin-top: 20%;
+	;
+}
+.Form__Login-div-input{
+	width:90%;
+	padding:2%;
+	margin:2%;
+	background-color: transparent;
+	border:0;
+	border-bottom:1px solid #fff;
+}
+/*boton Registrarse*/
+.Form__Login-button{
+	align-self: center;
+	width:80%;
+	background:#E2DB2C;
+	border-radius:20px;
+	margin-top:15%;
+	padding:2%;
+}
+/*Condiciones*/
+a{
+	color: white;
+	text-decoration: none;
+}
+.Acess{
+	display: flex;
+	justify-content: center;
+	padding-top:1%;
+	margin-bottom:7%;
+}
+.Acess___input{
+	margin-left: 2%;
+	margin-top:1%;
+	
+}
+.Acess___input:checked{
+	background-color:#E2DB2C;
+	color:#E2DB2C;
+}
