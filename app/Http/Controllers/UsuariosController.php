@@ -23,7 +23,7 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        //
+        // Agrego un comentario para realizar un commit
     }
 
     /**
