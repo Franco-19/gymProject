@@ -13,7 +13,7 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        //
+        return "<H1> Index de Técnicos Controllers</H1>";
     }
 
     /**
@@ -23,8 +23,7 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        // Agrego un comentario para realizar un commit
-        //Agrego otro comentario
+        return "<H1> Create de Técnicos Controllers</H1>";
     }
 
     /**
@@ -46,9 +45,8 @@ class UsuariosController extends Controller
      */
     public function show($id)
     {
-        //
+        return "Esto es el método Show de Usuarios Controllers";
     }
-
     /**
      * Show the form for editing the specified resource.
      *
