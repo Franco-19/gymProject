@@ -17,7 +17,7 @@ class UsuariosController extends Controller
         $usuarios=DB::select("SELECT * FROM usuario");
         $parametros =[
             "usuarios"=> $usuarios,
-            "titulo"=>"Esta es la tabla de Clientes"
+            "titulo"=>"Esta es la tabla de Usuarios!"
         ];
         return view("usuarios",$parametros);
     }

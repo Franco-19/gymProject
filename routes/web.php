@@ -35,4 +35,4 @@ Route::get('/usuarios/{id}', [UsuariosController::class 'show']);
 Route::delete('/clientes', [UsuariosController::class 'destroy']);
 */
 
-Route::resource('/clientes', UsuariosController::class);
+Route::resource('/usuarios', UsuariosController::class);
