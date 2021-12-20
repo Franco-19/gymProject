@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UsuariosController extends Controller
 {
@@ -13,7 +14,12 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        return "<H1> Index de Técnicos Controllers</H1>";
+        $usuarios=DB::select("SELECT * FROM usuario");
+        $parametros =[
+            "usuarios"=> $usuarios,
+            "titulo"=>"Esta es la tabla de Clientes"
+        ];
+        return view("usuarios",$parametros);
     }
 
     /**
