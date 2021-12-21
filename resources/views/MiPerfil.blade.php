@@ -4,14 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/CrearRutina.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/MiPerfil.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&display=swap" rel="stylesheet">
 	<script defer src="{{ asset('js/Menu.js') }}"></script>
 	<script src="https://kit.fontawesome.com/b29f7a8e25.js" crossorigin="anonymous"></script>
-	<title>Inicio</title>
+	<title>Mi Perfil</title>
 </head>
 <body>
 	<header class="header-menu">
@@ -19,7 +19,7 @@
 		<button class="bars">
 			<i class="fas fa-bars"></i>
 		</button>
-		<p class="Encabezado">CREAR RUTINA</p>
+		<p class="Encabezado">MI PERFIL</p>
 		<ul class="Menu__ul">
 			<li class="Menu__ul-li">
 					<i class="fas fa-home"></i>
@@ -52,27 +52,17 @@
 	</nav>
 </header>
 	<form class="FormRutinas">
-		<!--
-		<div class="FormRutinas__Busqueda">
-			<input type="text" class="InputTextoBusqueda" placeholder="Sentadilla...">
+			<div class="Form__Login-div">
+			<input type="text" class="Form__Login-div-input"placeholder="Nombre" readonly>
+			<input type="text" class="Form__Login-div-input"placeholder="Apellido" readonly>
+			<input type="password"class="Form__Login-div-input" placeholder="Contraseña" readonly>
+			<input type="mail"class="Form__Login-div-input" placeholder="Email" readonly>
+			<input type="number"class="Form__Login-div-input" placeholder="Numero de teléfono" readonly>
+			</div>
+		<div class="icon-usuario">
+			<i class="fas fa-user"></i>
 		</div>
-	-->
-		<div class="FormRutinas__Pectoral">
-			Pectoral
-			<input type="submit" class="FormRutinas__DivSubmit" value="+">
-		</div>
-		<div class="FormRutinas__Piernas">
-			Piernas
-			<input type="submit" class="FormRutinas__DivSubmit"value="+">
-		</div>
-		<div class="FormRutinas__Brazos">
-			Brazos
-			<input type="submit" class="FormRutinas__DivSubmit"value="+">
-		</div>
-		<div class="FormRutinas__Espalda">
-			Espalda
-			<input type="submit" class="FormRutinas__DivSubmit"value="+">
-		</div>
+		<input type="submit" value="EDITAR" class="Form__button">
 	</form>
 </body>
 </html>

@@ -1,0 +1,100 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	background: #000000;
+	color: #ffffff;
+}
+/*Menu*/
+.header-menu{
+	background-color:#E2DB2C;
+	height:8vh;
+	width:100vw;
+	top:0;
+	left:0;
+}
+nav{
+	display:flex;
+	justify-content: space-between;
+	background: transparent;
+	text-align: center;
+}
+/*icono menu*/
+.bars{
+	background: transparent;
+	height:8vh;
+	width:10vw;
+	border: none;
+	font-size:7vw;
+	margin-left: 5vw;
+}
+/*Encabezado*/
+.Encabezado{
+	color:#000000;
+	align-self: center;
+}
+/*iconi usuario*/
+.user{
+	background: transparent;
+	height:8vh;
+	width:10vw;
+	border: none;
+	align-items: center;
+	font-size:7vw;
+	margin-right:5vw;
+}
+/*Form*/
+.FormRutinas{
+	width:100%;
+	display: flex;
+	flex-direction:column;
+	padding:1%;
+}
+/*parrafo*/
+.FormRutinas__p{
+	position:absolute;
+	padding: 20vw;
+	font-size:2.5vh;
+	align-self: center;
+}
+/*boton Registrarse*/
+.Form__button{
+	align-self: center;
+	width:80%;
+	background:#E2DB2C;
+	border-radius:20px;
+	margin-top:60%;
+	padding:2%;
+}
+/*menu*/
+@media(max-width: 768px){
+	.Menu__ul{
+		position: absolute;
+		display: flex;
+		flex-direction:column;
+		width:40vw;
+		height:115vh;
+		list-style: none;
+		background-color:#000000;
+		margin-top:10vh;
+		margin-left:2vw;
+		right:100%;
+		transition: right 0.5s;
+		z-index:1;
+		padding-top:20vh;
+	}
+	.Menu__ul-li{
+		padding:1vh;
+		margin-bottom:5vh;
+	}
+	.Menu__ul-li a{
+		text-decoration: none;
+		color: #ffffff;
+	}
+	.menu_visible{
+		left:0;
+	}
+}

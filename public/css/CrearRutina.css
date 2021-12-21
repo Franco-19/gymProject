@@ -41,6 +41,11 @@ nav{
 	font-size:7vw;
 	margin-right:5vw;
 }
+/*nombre de la seccion*/
+.Encabezado{
+	color:#000000;
+	align-self: center;
+}
 /*Form*/
 .FormRutinas{
 	width:100%;

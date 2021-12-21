@@ -4,14 +4,14 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="{{ asset('css/CrearRutina.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/MisRutinas.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/normalize.css') }}">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&display=swap" rel="stylesheet">
 	<script defer src="{{ asset('js/Menu.js') }}"></script>
 	<script src="https://kit.fontawesome.com/b29f7a8e25.js" crossorigin="anonymous"></script>
-	<title>Inicio</title>
+	<title>Mis Rutinas</title>
 </head>
 <body>
 	<header class="header-menu">
@@ -19,7 +19,7 @@
 		<button class="bars">
 			<i class="fas fa-bars"></i>
 		</button>
-		<p class="Encabezado">CREAR RUTINA</p>
+		<p class="Encabezado">MIS RUTINAS</p>
 		<ul class="Menu__ul">
 			<li class="Menu__ul-li">
 					<i class="fas fa-home"></i>
@@ -52,27 +52,9 @@
 	</nav>
 </header>
 	<form class="FormRutinas">
-		<!--
-		<div class="FormRutinas__Busqueda">
-			<input type="text" class="InputTextoBusqueda" placeholder="Sentadilla...">
-		</div>
-	-->
-		<div class="FormRutinas__Pectoral">
-			Pectoral
-			<input type="submit" class="FormRutinas__DivSubmit" value="+">
-		</div>
-		<div class="FormRutinas__Piernas">
-			Piernas
-			<input type="submit" class="FormRutinas__DivSubmit"value="+">
-		</div>
-		<div class="FormRutinas__Brazos">
-			Brazos
-			<input type="submit" class="FormRutinas__DivSubmit"value="+">
-		</div>
-		<div class="FormRutinas__Espalda">
-			Espalda
-			<input type="submit" class="FormRutinas__DivSubmit"value="+">
-		</div>
+		<p class="FormRutinas__p">Actualmente no tines ninguna rutina creada.
+		Comienza por crear una ahora mismo!</p>
+		<input type="submit" value="CREAR RUTINA" class="Form__button">
 	</form>
 </body>
 </html>
