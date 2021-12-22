@@ -12,17 +12,19 @@
 	<title>Iniciar Sesión</title>
 </head>
 <body>
-	<div class="Form__Login-img"></div>
-	<form class="Form__Login">
-		<div class="Form__Login-div">
-			<input type="text" class="Form__Login-div-input"placeholder="Nombre de Usuario o Mail">
-			<input type="password"class="Form__Login-div-input" placeholder="Contraseña">
-		</div>
-		<input type="submit" value="Iniciar Sesión" class="Form__Login-button">
-	</form>
-	<div class="Acess">
-		<a href="https://www.google.com/search?q=que+lastima&rlz=1C1CHBF_esAR927AR927&tbm=isch&sxsrf=AOaemvKnla__xtmdDBC4RYsQ33L3osB2Cw:1639261836912&source=lnms&sa=X&ved=2ahUKEwix-u2b5tz0AhWSpJUCHdNRBIcQ_AUoAnoECAEQBA&biw=767&bih=752&dpr=1.25">¿Olvidaste tu contraseña?</a>
-	</div>
-	
+	{{-- <div class="Form__Login-img"></div> --}}
+    <div class="login_container">
+        <img class="login_container__logo" src="{{ asset('css/imagen/_LogoVis.png') }}" alt="">
+        <form class="Form__Login" autocomplete="off">
+            <div class="Form__Login-div">
+                <input type="text" class="Form__Login-div-input" placeholder="Nombre de Usuario o Mail" autocomplete="off">
+                <input type="password"class="Form__Login-div-input" placeholder="Contraseña" autocomplete="off">
+            </div>
+            <input type="submit" value="Iniciar Sesión" class="Form__Login-button">
+        </form>
+        <div class="Acess">
+            <a href="https://www.google.com/search?q=que+lastima&rlz=1C1CHBF_esAR927AR927&tbm=isch&sxsrf=AOaemvKnla__xtmdDBC4RYsQ33L3osB2Cw:1639261836912&source=lnms&sa=X&ved=2ahUKEwix-u2b5tz0AhWSpJUCHdNRBIcQ_AUoAnoECAEQBA&biw=767&bih=752&dpr=1.25">¿Olvidaste tu contraseña?</a>
+        </div>
+    </div>
 </body>
 </html>

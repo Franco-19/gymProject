@@ -104,12 +104,11 @@ nav{
 		height:115vh;
 		list-style: none;
 		background-color:#000000;
-		margin-top:10vh;
-		margin-left:2vw;
 		right:100%;
 		transition: right 0.5s;
 		z-index:1;
 		padding-top:20vh;
+        margin: 54px 0px
 	}
 	.Menu__ul-li{
 		padding:1vh;

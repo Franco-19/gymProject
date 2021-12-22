@@ -14,8 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('IniciarSesion');
 });
+
+Route::get('/mi-perfil', function () {
+    return view('MiPerfil');
+});
+
+
+Route::get('/register', function () {
+    return view('CrearUsuario');
+});
+
+
 
 Route::get('/getRutines', function(){
     return view('getRutines');
