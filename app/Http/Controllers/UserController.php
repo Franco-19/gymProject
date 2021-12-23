@@ -9,16 +9,13 @@ class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     *  
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
         $parametrosUser = ["userData" => User::all()];
-        // echo $id;
-
         return(view('dashboard', $parametrosUser));
-
     }
 
     /**
