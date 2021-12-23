@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class UsuariosController extends Controller
+class AlumnosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +13,7 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        $usuarios=DB::select("SELECT * FROM usuario");
-        $parametros =[
-            "usuarios"=> $usuarios,
-            "titulo"=>"Esta es la tabla de Usuarios!"
-        ];
-        return view("usuarios",$parametros);
+        //
     }
 
     /**
@@ -29,7 +23,7 @@ class UsuariosController extends Controller
      */
     public function create()
     {
-        return "<H1> Create de Técnicos Controllers</H1>";
+        //
     }
 
     /**
@@ -51,8 +45,9 @@ class UsuariosController extends Controller
      */
     public function show($id)
     {
-        return "Esto es el método Show de Usuarios Controllers: ".$id;
+        //
     }
+
     /**
      * Show the form for editing the specified resource.
      *
