@@ -1,10 +1,6 @@
 <?php
 
-<<<<<<< HEAD
 use App\Http\Controllers\UsuariosController;
-=======
-use App\Http\Controllers\UserController;
->>>>>>> login
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,8 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-<<<<<<< HEAD
 /*
 
 Route::get('/getRutines', function(){
@@ -43,12 +37,3 @@ Route::delete('/clientes', [UsuariosController::class 'destroy']);
 */
 
 Route::resource('/usuarios', UsuariosController::class);
-=======
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-
-Route::resource('/user', UserController::class);
->>>>>>> login
