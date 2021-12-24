@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ejercicio;
 use Illuminate\Http\Request;
 
 class EjerciciosController extends Controller
@@ -13,7 +14,9 @@ class EjerciciosController extends Controller
      */
     public function index()
     {
-        //
+        $params = ['ejercicios' => Ejercicio::All()];
+
+        return view('getEjercicios', $params);
     }
 
     /**

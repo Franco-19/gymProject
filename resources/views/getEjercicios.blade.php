@@ -1,5 +1,9 @@
 <div>
-    @for ($i = 0; $i < $count; $i++)
-        {{-- retorna todos los ejercicios --}}
-    @endfor
+    @isset($ejercicios)
+        @foreach ($ejercicios as $ejercicio)
+            <li>
+                {{ $ejercicio }}
+            </li>
+        @endforeach
+    @endisset
 </div>
