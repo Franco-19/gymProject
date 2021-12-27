@@ -18,10 +18,94 @@
 
                 <x-input
                     id="name"
-                    class="block mt-1 w-full col-md-6"
+                    class="block mt-1 w-full"
                     type="text"
                     name="name"
                     :value="old('name')"
+                    required autofocus
+                />
+            </div>
+
+            {{-- Apellido --}}
+            <div class="mt-4">
+                <x-label for="apellido" :value="__('Apellido')" />
+
+                <x-input
+                    id="apellido"
+                    class="block mt-1 w-full"
+                    type="text"
+                    name="apellido"
+                    :value="old('apellido')"
+                    required autofocus
+                />
+            </div>
+
+            {{-- dni --}}
+            <div class="mt-4">
+                <x-label for="dni" :value="__('D.N.I.')" />
+
+                <x-input
+                    id="dni"
+                    class="block mt-1 w-full"
+                    type="number"
+                    name="dni"
+                    :value="old('dni')"
+                    required autofocus
+                />
+            </div>
+
+            {{-- fecha de nacimiento --}}
+            <div class="mt-4">
+                <x-label for="fechaNacimiento" :value="__('Fecha de nacimiento')" />
+
+                <x-input
+                    id="fechaNacimiento"
+                    class="block mt-1 w-full"
+                    type="date"
+                    name="fechaNacimiento"
+                    :value="old('fechaNacimiento')"
+                    required autofocus
+                />
+            </div>
+
+            {{-- peso --}}
+            <div class="mt-4">
+                <x-label for="peso" :value="__('Peso(kg)')" />
+
+                <x-input
+                    id="peso"
+                    class="block mt-1 w-full"
+                    type="number"
+                    name="peso"
+                    :value="old('peso')"
+                    required autofocus
+                />
+            </div>
+
+            {{-- altura --}}
+            <div class="mt-4">
+                <x-label for="altura" :value="__('Altura(cm)')" />
+
+                <x-input
+                    id="altura"
+                    class="block mt-1 w-full"
+                    type="number"
+                    name="altura"
+                    :value="old('altura')"
+                    required autofocus
+                />
+            </div>
+
+            {{-- telefono --}}
+            <div class="mt-4">
+                <x-label for="telefono" :value="__('Teléfono')" />
+
+                <x-input
+                    id="telefono"
+                    class="block mt-1 w-full"
+                    type="tel"
+                    name="telefono"
+                    :value="old('telefono')"
                     required autofocus
                 />
             </div>
@@ -32,6 +116,13 @@
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
+
+            {{--
+                fecha de nacimiento
+                peso
+                altura
+                telefono
+            --}}
 
             <!-- Password -->
             <div class="mt-4">
@@ -45,7 +136,7 @@
 
             <!-- Confirm Password -->
             <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+                <x-label for="password_confirmation" :value="__('Confirmar Contraseña')" />
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
@@ -54,11 +145,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
+                    {{ __('Ya tienes cuenta?') }}
                 </a>
 
                 <x-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('Registrar') }}
                 </x-button>
             </div>
         </form>
