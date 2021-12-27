@@ -13,6 +13,30 @@
                     @isset($userData)
                         <p>Usuarios registrados al dia de hoy!</p>
                         {{ $userData }}
+                        <p>ejercicios disponibles</p>
+
+                        @foreach ($ejercicios as $ejercicio)
+                        {{-- revisar de realizar un formulario --}}
+
+                            <div class="d-flex gap-3 mb-3 align-items-center">
+                                <li>
+                                    Nombre: {{ $ejercicio->nombreEjercicio }}
+                                </li>
+                                <li>
+                                    Musculo: {{ $ejercicio->musculo }}
+                                </li>
+                                {{-- <button onclick="doSomeAction({{ $ejercicio }})" class="btn btn-primary addEjercicioToAlumno">
+                                    añadir
+                                </button> --}}
+                                <form action="{{ route('user.store') }} method="POST">
+                                    @csrf
+                                    <input type="hidden" value={{ $ejercicio }}>
+                                    <button type="submit" class="btn btn-primary">
+                                        Añadir
+                                    </button>
+                                </form>
+                            </div>
+                        @endforeach
                     @endisset
                 </div>
             </div>

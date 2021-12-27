@@ -2,20 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ejercicio;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *  
+     *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $parametrosUser = ["userData" => User::all()];
-        return(view('dashboard', $parametrosUser));
+        $parametrosUser = [
+            "userData" => User::all(),
+            "ejercicios" => Ejercicio::all(),
+            'userId' => Auth::id()
+        ];
+        return (view('dashboard', $parametrosUser));
     }
 
     /**
@@ -36,7 +42,15 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // modify this
+        // echo $request;
+        // echo $id;
+        $id = Auth::id();
+        $user = User::find($id);
+        echo $user;
+        echo $request;
+        $user->rutina = $request->ejercicio->NombreEjercicio;
+        $user->save();
     }
 
     /**
@@ -47,6 +61,13 @@ class UserController extends Controller
      */
     public function show($id)
     {
+        $user = User::find($id);
+
+        $parametros = [
+            'user' => $user
+        ];
+
+        return(view('getRutines', $parametros));
     }
 
     /**
@@ -69,7 +90,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // modify this
+        // echo $request;
+        // echo $id;
+        // $user = User::find($id);
+        // echo $user;
+        // echo $request;
+        // $user->rutina = $request->ejercicio->NombreEjercicio;
+        // $user->save();
     }
 
     /**
