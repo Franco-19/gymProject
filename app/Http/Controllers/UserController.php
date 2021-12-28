@@ -47,10 +47,29 @@ class UserController extends Controller
         // echo $id;
         $id = Auth::id();
         $user = User::find($id);
-        echo $user;
-        echo $request;
-        $user->rutina = $request->ejercicio->NombreEjercicio;
+        // echo $user;
+        // print_r($request->all());
+        // print_r($request->ejercicio);
+        // print_r($request->ejercicio["nombreEjercicio"]);
+        // echo $request->ejercicio["nombreEjercicio"];
+        $ejercicioDataJson = json_decode($request->ejercicio);
+        // echo gettype($ejercicioDataJson);
+        // print_r($ejercicioDataJson->idejercicios);
+        // $ejercicio = $request->ejercicio;
+        // echo $ejercicio->idejercicios;
+        // echo $request;
+        $user->rutina = $ejercicioDataJson->idejercicios;
         $user->save();
+
+        $parametrosUser = [
+            "userData" => User::all(),
+            "ejercicios" => Ejercicio::all(),
+            'userId' => Auth::id()
+        ];
+
+        return(view('dashboard', $parametrosUser));
+        // return '200';
+        // redict to home
     }
 
     /**
