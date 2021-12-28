@@ -21,7 +21,7 @@
 		<input type="submit" value="Iniciar Sesión" class="Form__Login-button">
 	</form>
 	<div class="Acess">
-		<a href="https://www.google.com/search?q=que+lastima&rlz=1C1CHBF_esAR927AR927&tbm=isch&sxsrf=AOaemvKnla__xtmdDBC4RYsQ33L3osB2Cw:1639261836912&source=lnms&sa=X&ved=2ahUKEwix-u2b5tz0AhWSpJUCHdNRBIcQ_AUoAnoECAEQBA&biw=767&bih=752&dpr=1.25">¿Olvidaste tu contraseña?</a>
+		<a href="#">¿Olvidaste tu contraseña?</a>
 	</div>
 	
 </body>

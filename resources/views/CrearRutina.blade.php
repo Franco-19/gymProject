@@ -35,7 +35,7 @@
 			</li>
 			<li class="Menu__ul-li">
 					<i class="fas fa-chalkboard-teacher"></i>
-					<a href="#" class="Menu__ul-li-a">Profesores</a>
+					<a href="Profesores.blade.php" class="Menu__ul-li-a">Profesores</a>
 			</li>
 			<li class="Menu__ul-li">
 				<i class="fas fa-envelope"></i>
