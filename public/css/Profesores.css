@@ -74,9 +74,9 @@ nav{
 .Entrenadores-img{
 	display: flex;
 	object-fit: cover;
-    width: 40vw;
-    height: 12vh;
-    border-radius: 60%;
+    width: 30vw;
+    height: 15vh;
+    border-radius: 100%;
     margin: auto;
 }
 @media(max-width: 768px){
@@ -88,8 +88,7 @@ nav{
 		height:115vh;
 		list-style: none;
 		background-color:#000000;
-		margin-top:10vh;
-		margin-left:2vw;
+		margin-top:8vh;
 		right:100%;
 		transition: right 0.5s;
 		z-index:1;
