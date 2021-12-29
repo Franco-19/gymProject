@@ -5,6 +5,9 @@
 }
 body{
 	background:url(./imagen/fondo-sesion.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 	font-family: 'Montserrat', sans-serif;
 	opacity: 0.9;
 	justify-content: center;
@@ -31,6 +34,7 @@ body{
 	background-color: transparent;
 	border:0;
 	border-bottom:1px solid #fff;
+	color: #ffffff;
 }
 /*boton Registrarse*/
 .Form__Login-button{

@@ -1,0 +1,108 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	background: url(./imagen/FondoProfesores.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+/*Menu*/
+.header-menu{
+	background-color:#E2DB2C;
+	height:8vh;
+	width:100vw;
+	top:0;
+	left:0;
+}
+nav{
+	display:flex;
+	justify-content: space-between;
+	background: transparent;
+	text-align: center;
+}
+/*icono menu*/
+.bars{
+	background: transparent;
+	height:8vh;
+	width:10vw;
+	border: none;
+	font-size:7vw;
+	margin-left: 5vw;
+}
+/*iconi usuario*/
+.user{
+	background: transparent;
+	height:8vh;
+	width:10vw;
+	border: none;
+	align-items: center;
+	font-size:7vw;
+	margin-right:5vw;
+}
+/*Form*/
+.FormRutinas{
+	width:100%;
+	display: flex;
+	flex-direction:column;
+	padding:1%;
+	text-transform: uppercase;
+}
+/*Encabezado*/
+.Encabezado{
+	color:#000000;
+	align-self: center;
+}
+/*Entrenadores*/
+.FormRutinas__Entrenador{
+	width:100%;
+	height:30vh;
+	display: flex;
+}
+.Nombre__Entrenador{
+    display: flex;
+    font-size: 3vh;
+    margin: auto;
+    width: 47vw;
+    text-align: -webkit-center;	
+}
+.Entrenadores-img{
+	display: flex;
+	object-fit: cover;
+    width: 30vw;
+    height: 15vh;
+    border-radius: 100%;
+    margin: auto;
+}
+@media(max-width: 768px){
+	.Menu__ul{
+		position: absolute;
+		display: flex;
+		flex-direction:column;
+		width:40vw;
+		height:115vh;
+		list-style: none;
+		background-color:#000000;
+		margin-top:8vh;
+		right:100%;
+		transition: right 0.5s;
+		z-index:1;
+		padding-top:20vh;
+	}
+	.Menu__ul-li{
+		padding:1vh;
+		margin-bottom:5vh;
+	}
+	.Menu__ul-li a{
+		text-decoration: none;
+		color: #ffffff;
+	}
+	.menu_visible{
+		left:0;
+	}
+}

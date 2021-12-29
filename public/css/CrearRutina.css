@@ -56,11 +56,12 @@ nav{
 }
 /*Busqueda*/
 .FormRutinas__Busqueda{
-	width:100vw;
-	height:10vh;
-	display: flex;
-	flex-direction:row;
-	padding:1%;
+	width: 92vw;
+    height: 10vh;
+    flex-direction: row;
+    padding: 1%;
+    display: flex;
+    margin: auto;
 }
 .InputTextoBusqueda{
 	width:95vw;
@@ -72,18 +73,18 @@ nav{
 	border: none;
 	outline: 0;
 	padding:3vw;
+	font-size: 2vh;
 }
 /*Secciones*/
 .FormRutinas__Pectoral{
 	position: relative;
-	width:95vw;
+	width:90vw;
 	border-radius:15px;
-	height:25vh;
+	height:23vh;
 	align-self: center;
 	background: url(./imagen/pectoral.jpg);
-	background-size: 100% 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
-	padding:20;
 	margin:2vh;
 }
 .FormRutinas__Pectoral label{
@@ -94,51 +95,56 @@ nav{
 
 .FormRutinas__Piernas{
 	position: relative;
-	width:95vw;
-	border-radius:10px;
-	height:25vh;
+	width:90vw;
+	border-radius:15px;
+	height:23vh;
 	align-self: center;
 	background: url(./imagen/piernas.jpg);
-	background-size: 100% 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
-	padding:20;
 	margin:2vh;
 }
 .FormRutinas__Brazos{
 	position: relative;
-	width:95vw;
-	border-radius:10px;
-	height:25vh;
+	width:90vw;
+	border-radius:15px;
+	height:23vh;
 	align-self: center;
 	background: url(./imagen/brazos.jpg);
-	background-size: 100% 100%;
+	background-size: cover;
 	background-repeat: no-repeat;
-	padding:20;
 	margin:2vh;
 }
 .FormRutinas__Espalda{
 	position: relative;
-	width:95vw;
-	border-radius:10px;
-	height:25vh;
+	width:90vw;
+	border-radius:15px;
+	height:23vh;
 	align-self: center;
 	background: url(./imagen/espalda.jpg);
-	background-size: 100% 100%;
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
-	padding:20;
 	margin:2vh;
+}
+.NombreSeccion{
+	display: flex;
+    font-size: 3vh;
+    padding: 6vw;
 }
 /*botones*/
 .FormRutinas__DivSubmit{
-	background:#E2DB2C;
-	border-radius:200px;
-	width:10vw;
-	height:5vh;
-	margin-left:80vw;
-	margin-top:15vh;
-	font-size:25px;
-	text-align: center;
-	font-weight:bold;
+	display: flex;
+    justify-content: center;
+    background: #E2DB2C;
+    border-radius: 200px;
+    width: 10vw;
+    height: 5vh;
+    margin-left: 78vw;
+    margin-top: 5vh;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
 }
 
 @media(max-width: 768px){
