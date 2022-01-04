@@ -1,0 +1,167 @@
+@import url(menu.css);
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./Imagen/background3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+@media screen and (max-width: 800px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;}
+      table {
+        width:100%;
+    }
+    table {
+      display: block;
+      overflow-x: auto;
+    }
+    thead {
+        display: none;
+    }
+    .encabezado {
+      visibility: hidden;
+  }
+    tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    tr td:first-child {
+        background: none;
+        color:#E2DB2C;
+        font-weight:bold;
+        font-size:1.3em;
+    }
+    tbody td {
+        display: block;
+        text-align:center;
+    }
+    tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
+
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+
+.perfil-texto{
+    margin-left: 111px;
+    margin-top: 9%;
+}
+.perfil-texto h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 45px;
+    color: #E2DB2C;
+}
+.perfil-texto h2{
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 24px;
+    text-align: center;
+    color: #ffff;
+    font-weight: 300;
+}
+
+.tablaDetalles{
+    position: absolute;
+    height: 179px;
+    left: 9%;
+    top: 47%;
+    margin-left: 29%;
+    margin-right: 25%;
+
+}
+.detalles{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+      }
+ th{
+    text-align: left;
+    padding: 10px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+
+}
+td {
+    text-align: left;
+    padding: 10px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+}
+.encabezado{
+    border-bottom: 2px solid #E2DB2C;
+}
+footer{
+	width:100%;
+	height:10vh;
+	display: flex;
+  opacity: 0.5;
+  align-items: baseline;
+  margin-top: 30vh;
+}
+.FinDePagina{
+	display:flex;
+	align-items:center;
+	flex-wrap: nowrap;
+	margin-left: 2vw;
+}
+.FinDePagina2{
+	display:flex;
+	align-items:center;
+	flex-wrap: nowrap;
+	margin-left: auto;
+	margin-right: 2vw;
+}
+.FinDePaginaItems{
+	display:flex;
+	width:7vw;
+	justify-content: center;
+}
+.imgEnd{
+	display: flex;
+	width: 7vw;
+    height: 7vw;
+    position: relative;
+    filter: brightness(2);
+    object-fit: contain;
+}
+.FinDePaginaItems a{
+	text-decoration:none;
+	color:#ffffff;
+	align-self: center;
+	font-size: 1.5vh;
+}
+.FinDePaginaItems a:hover {
+  color: #E2DB2C;
+  filter: brightness(2);
+}

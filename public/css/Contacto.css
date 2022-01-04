@@ -1,0 +1,160 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	color: #ffffff;
+	background:url(./imagen/Contecto2.jpg);
+	background-attachment: fixed;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.9;
+	justify-content: center;
+	background-size: 100vw 100vh;
+	border: none;
+}
+/*Menu*/
+.header-menu{
+	background-color:#E2DB2C;
+	height:8vh;
+	width:100vw;
+	top:0;
+	left:0;
+	filter: brightness(250%);
+}
+nav{
+	display:flex;
+	justify-content: space-between;
+	background: transparent;
+	text-align: center;
+}
+/*icono menu*/
+.bars{
+	background: transparent;
+	height:8vh;
+	width:10vw;
+	border: none;
+	font-size:7vw;
+	margin-left: 5vw;
+}
+/*Encabezado*/
+.Mensaje{
+	color:#ffffff;
+	text-align: justify;
+	padding:4vw;
+	font-size:2.5vh;
+	margin-top:15vh;
+	filter: brightness(250%);
+	width:70vw;
+	margin-left:15vw;
+}
+.Encabezado{
+	color:#000000;
+	align-self: center;
+	font-size:2vh;
+}
+/*iconi usuario*/
+.user{
+	background: transparent;
+	height:8vh;
+	width:10vw;
+	border: none;
+	align-items: center;
+	font-size:7vw;
+	margin-right:5vw;
+}
+/*Form*/
+.FormRutinas{
+	width:100%;
+	display: flex;
+	flex-direction:column;
+	padding:1%;
+	margin-top:5vh;
+	z-index: 2;
+}
+.FormRutinas__div{
+	display: flex;
+	justify-content: center;
+	position: absolute;
+}
+/* input contra y nombre */
+.Form__Login-div{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	justify-content:flex-start;
+	z-index: 1;
+}
+.Form__Login-div-input{
+	width:43%;
+	padding:2%;
+	margin:2%;
+	color:#FFFFFF;
+	background-color:transparent;
+	outline:none;
+	border:0;
+	border-bottom:1px solid #fff;
+	filter: brightness(200%);
+}
+.input-mensaje{
+	position: relative;
+	margin-top:2vh;
+	width:90%;
+	flex-grow:2;
+	flex-wrap: wrap;
+	filter: brightness(220%);
+	z-index: 1;
+}
+.icon-usuario{
+	position: absolute;
+	right:1%;
+	width:50vw;
+	height:50vh;
+	font-size: 52vw;
+	text-align: center;
+}
+/*boton Registrarse*/
+.Form__button{
+	position: relative;
+	align-self: center;
+	width:80%;
+	background:#E2DB2C;
+	border-radius:20px;
+	margin-top:30%;
+	padding:2%;
+	filter: brightness(200%);
+	z-index: 1;
+}
+/*menu*/
+@media(max-width: 768px){
+	.Menu__ul{
+		position: absolute;
+		display: flex;
+		flex-direction:column;
+		width:40vw;
+		height:115vh;
+		list-style: none;
+		background-color:#000000;
+		margin-top:8vh;
+		margin-left:2vw;
+		right:100%;
+		transition: right 0.5s;
+		padding-top:20vh;
+		z-index: 20;
+	}
+	.Menu__ul-li{
+		padding:1vh;
+		margin-bottom:5vh;
+	}
+	.Menu__ul-li a{
+		text-decoration: none;
+		color: #ffffff;
+	}
+	.menu_visible{
+		left:-3%;
+	}
+}
+/*background:#E2DB2C;*/

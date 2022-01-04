@@ -1,150 +1,60 @@
 <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Nombre')" />
-
-                <x-input
-                    id="name"
-                    class="block mt-1 w-full"
-                    type="text"
-                    name="name"
-                    :value="old('name')"
-                    required autofocus
-                />
+    {{-- <nav>
+        <div>
+            <a href="index.php">
+                <img class="logo" src="{{ asset('./css/Imagen/_LogoVis 1.png') }}">
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="bar-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <ul class="nav-menu">
+            <li><a href="{{ asset('index') }}">INICIO</a></li>
+            <li><a href="{{ asset('entrenadores') }}">ENTRENADORES</a></li>
+            <li><a href="{{ asset('contacto2') }}">CONTACTO</a></li>
+            <li><a class="activo" href="{{ asset('registro') }}">REGISTRARSE</a></li>
+            <li><a href="{{ asset('login') }}">INICIAR SESION</a></li>
+        </ul>
+    </nav> --}}
+    <div class="image_background">
+        <img src="{{ asset('css/Imagen/background3.png') }}" alt="">
+        <div class="registro-caja">
+            <div class="registro-texto">
+                <h1>REGISTRARSE</h1>
+                <h2>Sigue tu progreso día a día.</h2>
             </div>
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
 
-            {{-- Apellido --}}
-            <div class="mt-4">
-                <x-label for="apellido" :value="__('Apellido')" />
+                <label for="name"></label>
+                <input id="name" name="name" type="text" placeholder="Nombre" required>
 
-                <x-input
-                    id="apellido"
-                    class="block mt-1 w-full"
-                    type="text"
-                    name="apellido"
-                    :value="old('apellido')"
-                    required autofocus
-                />
-            </div>
+                <label for="apellido"></label>
+                <input type="text" placeholder="Apellido" id="apellido" name="apellido">
 
-            {{-- dni --}}
-            <div class="mt-4">
-                <x-label for="dni" :value="__('D.N.I.')" />
+                <label for="mail"></label>
+                <input type="email" placeholder="Email" id="email" name="email">
 
-                <x-input
-                    id="dni"
-                    class="block mt-1 w-full"
-                    type="number"
-                    name="dni"
-                    :value="old('dni')"
-                    required autofocus
-                />
-            </div>
+                <label for="username"></label>
+                <input type="text" placeholder="Nombre de usuario" id="usuario" name="usuario">
 
-            {{-- fecha de nacimiento --}}
-            <div class="mt-4">
-                <x-label for="fechaNacimiento" :value="__('Fecha de nacimiento')" />
+                <label for="contraseña"></label>
+                <input type="password" placeholder="Contraseña" id="contraseña" name="contraseña">
+                <label for="contraseña"></label>
+                <input type="password" placeholder="Confirmar contraseña" id="contraseña" name="contraseña">
 
-                <x-input
-                    id="fechaNacimiento"
-                    class="block mt-1 w-full"
-                    type="date"
-                    name="fechaNacimiento"
-                    :value="old('fechaNacimiento')"
-                    required autofocus
-                />
-            </div>
+                <label for="telefono"></label>
+                <input type="number" placeholder="Número de teléfono" id="telefono" name="telefono">
 
-            {{-- peso --}}
-            <div class="mt-4">
-                <x-label for="peso" :value="__('Peso(kg)')" />
+                <br><label class="terminos-condiciones" for="condiciones">Acepta los <a
+                        href="pagina_condiciones.html">términos y condiciones</a>
+                    <input type="checkbox" name="condiciones"></label>
 
-                <x-input
-                    id="peso"
-                    class="block mt-1 w-full"
-                    type="number"
-                    name="peso"
-                    :value="old('peso')"
-                    required autofocus
-                />
-            </div>
+                <input class="boton" type="submit" value="REGISTRARSE" id="registrarse">
 
-            {{-- altura --}}
-            <div class="mt-4">
-                <x-label for="altura" :value="__('Altura(cm)')" />
 
-                <x-input
-                    id="altura"
-                    class="block mt-1 w-full"
-                    type="number"
-                    name="altura"
-                    :value="old('altura')"
-                    required autofocus
-                />
-            </div>
-
-            {{-- telefono --}}
-            <div class="mt-4">
-                <x-label for="telefono" :value="__('Teléfono')" />
-
-                <x-input
-                    id="telefono"
-                    class="block mt-1 w-full"
-                    type="tel"
-                    name="telefono"
-                    :value="old('telefono')"
-                    required autofocus
-                />
-            </div>
-
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Contraseña')" />
-
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirmar Contraseña')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
-                    {{ __('Ya tienes cuenta?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Registrar') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
+                <a href="{{ asset('login') }}">¿Ya tienes cuenta? ¡Inicia sesión aquí!</a>
+            </form>
+        </div>
+    </div>
 </x-guest-layout>

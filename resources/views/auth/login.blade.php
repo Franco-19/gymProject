@@ -1,59 +1,60 @@
 <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
-
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
-
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <!-- Email Address -->
+    {{-- <header>
+        <nav>
             <div>
-                <x-label for="email" :value="__('Email')" />
-
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+                <a href="index.php">
+                    <img class="logo" src="{{ asset('./css/Imagen/_LogoVis 1.png') }}">
             </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-menu">
+                <li><a href="{{ asset('index') }}">INICIO</a></li>
+                <li><a href="{{ asset('entrenadores') }}">ENTRENADORES</a></li>
+                <li><a href="{{ asset('contacto2') }}">CONTACTO</a></li>
+                <li><a href="{{ asset('registro') }}">REGISTRARSE</a></li>
+                <li><a class="activo" href="#">INICIAR SESION</a></li>
+            </ul>
+        </nav>
+    </header> --}}
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Contraseña')" />
+    <!-- Session Status -->
+    <x-auth-session-status class="mb-4" :status="session('status')" />
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
+    <!-- Validation Errors -->
+    <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
+    <div class="image_background">
+        <div class="login-caja">
+            <div class="login-texto">
+                <h1>INICIAR SESIÓN</h1>
+                <h2>Sigue tu progreso día a día.</h2>
             </div>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
 
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Recuerdame') }}</span>
-                </label>
-            </div>
+                <input type="email" placeholder="Ingrese su mail" name="email" id="email" required autofocus>
 
-            <div class="flex items-center justify-end mt-4">
+                <input type="password" placeholder="Contraseña" name="password" id="password" required
+                    autocomplete="current-password">
+
+                <input class="boton" type="submit" value="INICIAR SESION" name="iniciar">
+
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900"
+                        href="{{ route('password.request') }}">
                         {{ __('¿Olvidaste tu contraseña?') }}
                     </a>
-                    @endif
+                @endif
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
-                    {{ __('Aún no tienes cuenta? Crea una ahora mismo') }}
+                    {{ __('¿Aún no tienes cuenta? Crea una ahora mismo') }}
                 </a>
 
-                <x-button class="ml-3">
-                    {{ __('Iniciar sesión') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
+                {{-- <a href="#">¿Olvidaste tu contraseña?</a><br>
+                <a href="{{ asset('registro') }}">¿No tienes cuenta? ¡Regístrate aquí!</a> --}}
+            </form>
+        </div>
+    </div>
+
 </x-guest-layout>

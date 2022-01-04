@@ -1,0 +1,156 @@
+@import url(menu.css);
+
+/* header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./Imagen/background3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+.image_background {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./Imagen/background3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+.login-caja {
+    width: 100%;
+    height: 420px;
+    color: #e2db2c;
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+@media (min-width: 768px) {
+    .login-caja {
+        width: 440px;
+    }
+}
+
+.login-texto {
+    margin-bottom: 40px;
+}
+.login-caja h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 40px;
+}
+.login-caja h2 {
+    margin: 0;
+    padding: 0 0 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #ffff;
+    font-weight: 300;
+}
+.login-caja label {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+.login-caja input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.login-caja input[type="text"],
+.login-caja input[type="password"],
+.login-caja input[type="email"]  {
+    border: none;
+    border-bottom: 1px solid #e2db2c;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #f0f0f0;
+    font-size: 16px;
+}
+.boton {
+    border-radius: 50px;
+    border: none;
+    background: #e2db2c;
+    font-weight: bold;
+    font-family: "Montserrat";
+    font-size: 20px;
+    height: 42px;
+    margin-top: 30px;
+    color: #1F1F1F;
+}
+.login-caja a {
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgray;
+    margin-left: 25%;
+}
+.login-caja a:hover {
+    color: #f0f0f0;
+}
+footer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    opacity: 0.5;
+    align-items: baseline;
+    margin-top: 30vh;
+}
+.FinDePagina {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: 2vw;
+}
+.FinDePagina2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: 2vw;
+}
+.FinDePaginaItems {
+    display: flex;
+    width: 7vw;
+    justify-content: center;
+}
+.imgEnd {
+    display: flex;
+    width: 7vw;
+    height: 7vw;
+    position: relative;
+    filter: brightness(2);
+    object-fit: contain;
+}
+.FinDePaginaItems a {
+    text-decoration: none;
+    color: #ffffff;
+    align-self: center;
+    font-size: 1.5vh;
+}
+.FinDePaginaItems a:hover {
+    color: #e2db2c;
+    filter: brightness(2);
+}
+
+/* @media only screen (max-width: 768px) {
+    .image_background {
+        background: url(./imagen/fondo-sesion.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        background-attachment: fixed;
+        font-family: "Montserrat", sans-serif;
+        opacity: 0.9;
+        justify-content: center;
+    }
+} */

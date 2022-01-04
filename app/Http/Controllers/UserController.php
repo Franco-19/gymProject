@@ -21,7 +21,7 @@ class UserController extends Controller
             "ejercicios" => Ejercicio::all(),
             'userId' => Auth::id()
         ];
-        return (view('dashboard', $parametrosUser));
+        return (view('entrenamiento', $parametrosUser));
     }
 
     /**
@@ -47,20 +47,65 @@ class UserController extends Controller
         // echo $id;
         $id = Auth::id();
         $user = User::find($id);
-        // echo $user;
-        // print_r($request->all());
-        // print_r($request->ejercicio);
-        // print_r($request->ejercicio["nombreEjercicio"]);
-        // echo $request->ejercicio["nombreEjercicio"];
-        $ejercicioDataJson = json_decode($request->ejercicio);
-        // echo gettype($ejercicioDataJson);
-        // print_r($ejercicioDataJson->idejercicios);
-        // $ejercicio = $request->ejercicio;
-        // echo $ejercicio->idejercicios;
-        // echo $request;
-        $user->rutina = $ejercicioDataJson->idejercicios;
-        $user->save();
 
+        $ejercicioDataJson = json_decode($request->ejercicio);
+
+
+        // $nombreDeEjercicio = $ejercicioDataJson;
+        // $rutinaEnString = $ejercicioDataJson->rutina;
+        // $rutinaEnArray=$this->transformarCadenaEnArray($rutinaEnString);
+        // $longitudDeRutina = count($rutinaEnArray);
+        // $posicionDelEjercicio = array_search($rutinaEnArray, $nombreDeEjercicio);
+
+        // if ($posicionDelEjercicio !== false)
+        // {
+        // $segundaParteDeRutina = array_slice($rutinaEnArray, $posicionDelEjercicio+1);;
+        // $primeraParteDeRutina = array_slice($rutinaEnArray,0,$posicionDelEjercicio);
+        // $nuevaRutina = array_merge($primeraParteDeRutina,$segundaParteDeRutina);        } else {
+
+        //     $nombreDeEjercicio = $ejercicioDataJson->nombreEjercicio;
+        //     $ejerciciosArray = [];
+
+        //     if(gettype($user->rutina) !== 'array'){
+        //         $unaRutina = [$user->rutina];
+        //         array_push($unaRutina,$nombreDeEjercicio);
+        //         $user->rutina = $unaRutina;
+        //         $unaRutina=[];
+        //         $user->save();
+        //     } else {
+        //         $unaRutina = $user->rutina;
+        //         array_push($unaRutina,$nombreDeEjercicio);
+        //         $user->rutina = $unaRutina;
+        //         $unaRutina=[];
+        //         $user->save();
+        //     }
+        // }
+
+
+
+
+        // if(gettype($user->rutina) !== 'array'){
+        //     $unaRutina = [$user->rutina];
+        //     array_push($unaRutina,$nombreDeEjercicio);
+        //     $user->rutina = $unaRutina;
+        //     $unaRutina=[];
+        //     $user->save();
+        // } else {
+        //     $unaRutina = $user->rutina;
+        //     array_push($unaRutina,$nombreDeEjercicio);
+        //     $user->rutina = $unaRutina;
+        //     $unaRutina=[];
+        //     $user->save();
+        // }
+
+        // $user->rutina = [];
+        // $user->save();
+
+
+
+/*       */
+
+        // parametros (revisar de eliminar cuando no sea necesario)
         $parametrosUser = [
             "userData" => User::all(),
             "ejercicios" => Ejercicio::all(),
@@ -129,4 +174,18 @@ class UserController extends Controller
     {
         //
     }
+
+
+    public function transformarCadenaEnArray($unaCadena)
+    {
+        $nuevoArray = explode ( ',', $unaCadena);
+        return $nuevoArray;
+    }
+
+
+
+
 }
+
+    //Decir la cantidad de ejercicios. count($unaRutina);
+    //Buscar un Ejercicio array_search($unaRutina, $unEjercicio);

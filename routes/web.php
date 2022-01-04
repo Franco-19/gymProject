@@ -43,6 +43,30 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
+Route::get('/login-old', function () {
+    return view('auth.login-old');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
+
+Route::get('/entrenadores', function () {
+    return view('entrenadores');
+})->name('entrenadores');
+
+Route::get('/entrenamiento', function () {
+    return view('entrenamiento');
+})->name('entrenamiento');
+
+Route::get('/rutinaPrincipiante', function () {
+    return view('rutinaPrincipiante');
+})->name('rutinaPrincipiante');
+
+Route::get('/rutinaPersonalizada', function () {
+    return view('rutinaPersonalizada');
+})->name('rutinaPersonalizada');
+
 /**
  * /registrarse probablemente no sea necesario
  */
@@ -71,8 +95,8 @@ Route::resource('/ejercicios', EjerciciosController::class);
  */
 
 Route::get('/', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+    return view('index');
+})->middleware(['auth'])->name('index');
 
 require __DIR__ . '/auth.php';
 
